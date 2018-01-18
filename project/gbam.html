@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ziyin Zhang &mdash; GBAM Music Wristband</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ziyin Zhang portfolio" />
+    <meta name="keywords" content="Ziyin Zhang portfolio" />
+    <meta name="author" content="Ziyin Zhang" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+    <body>
+
+    <div id="fh5co-wrap">
+        <header id="fh5co-header">
+            <div class="container">
+                <nav class="fh5co-main-nav">
+                    <ul>
+                        <li><a href="../index.html"><span>Home</span></a></li>
+                        <li class="fh5co-active"><a href="../project.html"><span>Project</span></a></li>
+                        <li><a href="../game.html"><span>Game</span></a></li>
+                        <li><a href="../artwork.html"><span>Artwork</span></a></li>
+                        <li><a href="../about.html"><span>About</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="fh5co-hero" style="background-image: url(image/gbam/GBAM.jpg);" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                        <div class="fh5co-intro fh5co-table-cell">
+                            <h1 class="text-center">GBAM Music Wristband</h1>
+                            <p>Gesture Based Audio Mixing wearable technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2>GBAM Music Wristband</h2>
+                        <h4>A wearable technology project with Andy Chow and Michael Wonderley</h4>
+
+                          <p> Our team was always interested in new ways to interact with the environment. We started off with the idea to use a tactile sensor to read the texture of a surface that a user was touching in order to produce a sound. After doing some research, we realized that sensing surface texture was still a relatively new technology and it is not easy for us to get hands on an tactile sensor. Thus we changed our focus away from tactile and more towards a dancing or gesture focused sound creation device.</p>
+
+                          <p> During our preliminary research we found products which did similar things, for example the MYO Gesture Control Armband, which was used on stage by <a href="http://www.myo.com/arminvanbuuren/" target="_blank">DJ Armin Van Buuren</a>, as well as <a href="http://www.ign.com/videos/2014/08/19/disney-fantasia-music-evolved-live-action-trailer" target="_blank"><i> Disney Fantasia: Music Evolved</i></a>, an interaction performance for Fantasia Kinect game.
+                          </p>
+
+                          <h4> <i>Our inspiration</i></h4>
+                          <a href="http://www.myo.com/arminvanbuuren/" target="_blank"> <img style="max-width: 600px" src="image/gbam/inspiration_armin.png" class="img-responsive image-shadow"><br/></a>
+                          <a href="http://www.ign.com/videos/2014/08/19/disney-fantasia-music-evolved-live-action-trailer" target="_blank"> <img style="max-width: 600px" src="image/gbam/inspiration_disney.jpg" class="img-responsive image-shadow"><br/></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="http://github.com/lindazhanghf/GBAM_Music_Wirstband" target="_blank" class="btn">View source code on GitHub <i class="icon-github"></i></a>
+                        <b> What we used:</b>
+                        <br/>Arduino<br />
+                        <img src="https://cdn-shop.adafruit.com/1200x900/849-03.jpg" class="img-responsive image-shadow">
+                        <br/>MPU-6050 Accelerometer and Gyro Sensor<br />
+                        <img src="https://d2drzakx2pq6fl.cloudfront.net/production/products/119/large/3-axis-accelerometer-plus-3-axis-gyro-mpu6050.jpg?1442477953" class="img-responsive image-shadow">
+                    </div>
+                    <div class="col-md-10">
+                        <p> Drawing inspirations from the two, We decided to design new ways for DJ to interact with music when performing on stage. </p>
+
+                        <p> Our final prototype uses a MPU6050 sensor with Arduino. Accelerometer data was collected and analysed in order to determine the user's gesture, therefore changes the states in the program to manipulate music.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                        <a href="https://www.youtube.com/watch?v=Jsoc6-9Yp0I&index=1&list=PLteamvae1Bf-pxJ_hnOV9iDjKZDExOzeN" target="_blank" class="btn">
+                        <b>Video Demo</b></a><br/>
+                        <iframe width="480" height="270" src="https://www.youtube.com/embed/Jsoc6-9Yp0I" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="480" height="270" src="https://www.youtube.com/embed/IkNuhpfJKe8" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-parallax" style="background-image: url(image/gbam/prototype.png);" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div  class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                        <div class="fh5co-intro fh5co-table-cell">
+                            <h1 class="text-center">Understanding Gestures</h1>
+                            <p>Process of figuring out the algorithm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row">
+                    <b>Get Started</b> <br/>
+                    <p>We followed a <a href="https://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/" target="_blank">tutorial</a> that walk us through the installation and required libraries of the MPU-6050 sensor, and demostrates the sensor by visualization in Processing. We used this visualization to make sense of the data, as the raw output of MPU-6050 is quite complicated. After some testing, we decided to use "readable_real_accel", the acceleration components with gravity removed, so that we can minimize the interference of gravity on our gesture regocnition.</p>
+                    <div class="row">
+                        <div class="col-md-4"> <img style="max-height: 300px"  src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2014/11/mpuSerial.png" class="img-responsive image-shadow"></div>
+                        <div class="col-md-4"><img style="max-height: 300px"  src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/process.png" class="img-responsive image-shadow"></div><br/><br/><br/><a href="https://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/" target="_blank"> <i>IMU Interfacing Tutorial: <br/>Get started with Arduino and the MPU 6050 Sensor!</i></a>
+                    </div>
+                    <br/><b>Gesture Calculation</b> <br/>
+                    <p>From there we began experimenting with the data to test the limits of the sensors and eventually found a method we felt accurately detected when a user has moved the device a direction. By taking the aggregate accelerometer data and summing it we have a strong indication of when the user has made a significant movement. This method also allows us to adjust the threshold for detection "significant" motion to adjust for a user's personal preference. We then take the largest absolute value of the 3 axes to calculate which direction the user is currently moving.</p>
+                    <img style="max-height: 250px"  src="image/gbam/gbam_calculation.png" class="img-responsive image-shadow">
+                    <br/><b>Limitation</b> <br/>
+                    <p>This method fails to adjust for a constant gravity (which the accelerometer does read) which can switch axes as the user turns their arm. The tradeoff is that it is extremely easy to implement and saves us a lot of development time otherwise spent modeling the users arm to make decisions off of or implementing and training a machine learning algorithm.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fh5co-parallax" style="background-image: url(image/gbam/gesture_mapping.png);" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                        <div class="fh5co-intro fh5co-table-cell">
+                            <h1 class="text-center">Gesture Mapping</h1>
+                            <p>Using state machines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row">
+                    <b>State Diagram</b> <br/>
+                    <img src="image/gbam/states_diagram.png" class="img-responsive image-shadow">
+                    <p>Once we had the program reading in user movements consistently we began setting it to buffer in each user movement and search a dictionary of known combinations for a match. When a match is found the program either enters the state for that key (for continuous operations such as changing volume) or executes the action directly (for binary actions like play and pause). </p>
+                    <p>Currently the system exists such that a base music track plays and there are 5 options for tracks you can add to it. The aggregate of what is currently playing is called the "mix" and acts as the base state when you load into the program. Users can select a track or the whole mix and then select which action they wish to perform. For the continuous modulations users select the action they wish to perform and then use a back and forth or up and down motion much like a slider to select the desired value of the variable. For further details on which motions do what, see the Gesture Map documentation provided below.</p>
+
+                    <br/><b>Gesture Map</b> <br/>
+                    <p>We designed gestures for each of the tracks and modes. Each gesture is identified by 3 movements, as indicated by the arrows shown below.</p>
+                    <p>The gestures are designed to mimic the way the numbers are written. See below for the gestures to switch between tracks:</p>
+                    <a href="http://docs.google.com/viewerng/viewer?url=https://github.com/lindazhanghf/portfolio/raw/master/files/GBAM_GestureMap.pdf " target="_blank">
+                    <img src="image/gbam/GestureMap_tracks.png" class="img-responsive image-shadow"></a>
+                    <br/>
+                    <p>The gestures to enter different mixing modes are designed in a similar fashion: the gesture for <i>pan mode</i> and <i>volume mode</i> are basically writting the letter "n" for "pa<b>n</b>" and "u" for "vol<b>u</b>me"; the gesture for <i>scratch mode</i> is designed to mimic the back and forth horizontal action of scratching.</p>
+                    <a href="http://docs.google.com/viewerng/viewer?url=https://github.com/lindazhanghf/portfolio/raw/master/files/GBAM_GestureMap.pdf " target="_blank">
+                    <img src="image/gbam/GestureMap_modes.png" class="img-responsive image-shadow"></a>
+                    <p>The gestures are all mapped to their corresnponding modes. However due to time constraints, we were only able to finish 3 out of 8 mixing modes as shown above.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-parallax" style="background-image: url(image/gbam/demo.png);" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                        <div class="fh5co-intro fh5co-table-cell">
+                            <h1 class="text-center">Video Demo</h1>
+                            <!-- <p></p> -->
+                                <a target="_blank" href="https://youtu.be/IkNuhpfJKe8">YouTube</a><a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><i class="icon-youtube"></i></a>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-section">
+            <div class="container">
+                <b>Bibliography: </b>
+                <p>[1] K. M, "Myo gesture control Armband," in MYO, 2013. [Online]. Available: www.myo.com/. Accessed: Jul. 25, 2016.</p>
+                <p>[2] H. Morita, S. Hashimoto, and S. Ohteru, "A computer music system that follows a human conductor," Computer, vol. 24, no. 7, pp. 44–53, Jul. 1991.</p>
+                <p>[3] admin, "Understanding audio effects: An overview of types and uses," in Mixing and Mastering, Dubspot Blog, 2016. [Online]. Available: blog.dubspot.com/understanding-audio-effects-an-overview/. Accessed: Jul. 25, 2016.</p>
+                <p> [3] Jason, "Arduino MPU 6050 - best IMU sensor Tutorial," in Arduino projects, DIY Hacking, 2014. [Online]. Available: diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/. Accessed: Jul. 25, 2016.</p>
+                <p>[4] J. Tidey, "In the studio: Audio effects explained (includes audio samples)," 2014. [Online]. Available: www.prosoundweb.com/article/in_the_studio_audio_effects_explained_includes_audio_samples/. Accessed: Jul. 25, 2016.</p>
+                <p> [5] Arduino, "Arduino playground - MPU-6050," in Arduino Playground, 2016. [Online]. Available: playground.arduino.cc/Main/MPU-6050. Accessed: Jul. 25, 2016.</p>
+                <b>Libraries / Software Used: </b>
+                <p>Arduino - www.arduino.cc</p>
+                <p>Processing - processing.org</p>
+                <p>Minim - code.compartmental.net/tools/minim</p>
+                <p>I2C - github.com/jrowberg/i2cdevlib</p>
+                <p>VirtualDJ - www.virtualdj.com</p>
+            </div>
+        </div>
+
+    </div> <!-- END fh5co-wrap -->
+
+
+    <footer id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Me</h3>
+                    <p style="color:white">Ziyin Zhang is currently a graduate student at Georgia Tech studying Digital Media, with an interest in Human Computer Interaction and Game Design.</p>
+                </div>
+                <div class="col-md-3 col-md-push-1">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../project.html">Project</a></li>
+                        <li><a href="../game.html">Game</a></li>
+                        <li><a href="../artwork.html">Artwork</a></li>
+                        <li><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-push-1">
+                    <h3>Find Me on</h3>
+                    <ul class="fh5co-social">
+                        <li><a target="_blank" href="http://github.com/lindazhanghf"><i class="icon-github"></i> <span>GitHub</span></a></li>
+                        <li><a target="_blank" href="http://www.youtube.com/channel/UCNAdGpiHWItoRD0oSGgpX2g"><i class="icon-youtube"></i> <span>YouTube</span></a></li>
+                        <li><a target="_blank" href="http://www.linkedin.com/in/ziyinzhang"><i class="icon-linkedin"></i> <span>LinkedIn</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 fh5co-copyright text-center">
+                    <p><small>&copy; 2016 Free HTML5 Simple. All Rights Reserved. </small> Images: <a href="artwork/photography.html" target="_blank">Ziyin Zhang Photography</a></small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <!-- Stellar -->
+    <script src="../js/jquery.stellar.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="../js/main.js"></script>
+
+    </body>
+</html>
+
