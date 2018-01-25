@@ -750,5 +750,19 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
 
+
+/*
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-vcenter {
+  display: flex;
+  align-items: center;
 }
