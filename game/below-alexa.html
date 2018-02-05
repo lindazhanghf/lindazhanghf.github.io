@@ -12,6 +12,7 @@
     <meta name="description" content="Ziyin Zhang portfolio" />
     <meta name="keywords" content="Ziyin Zhang portfolio" />
     <meta name="author" content="Ziyin Zhang" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -71,7 +72,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <!-- <h1 class="text-center">Below</h1> -->
+                            <!-- <h1 class="text-center my-title">Below</h1> -->
                             <!-- <p>An <i>Alexa</i> Game</p> -->
                         </div>
                     </div>
@@ -118,7 +119,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <h1 class="text-center">Design Process</h1>
+                            <h1 class="text-center my-title">Design Process</h1>
                             <!-- <p>Explore all projects page</p> -->
                         </div>
                     </div>
@@ -129,24 +130,24 @@
         <div class="fh5co-section">
             <div class="container">
                 <div class="row" style="color:black">
-                    <b>The story</b><br/>
+                    <h2>The story</h2>
                     The game is consist of 5 parts:
                     <ol>
-                    <li><b style="color:#666666">Prologue</b>: setting up the stage for the conversation using a radio</li>
-                    <li><b style="color:#666666">Part 1</b>: player ask various questions to understand the situation of the NPC</li>
-                    <li><b style="color:#666666">Part 2</b>: player instruct the NPC to help Dr. Lee</li>
-                    <li><b style="color:#666666">Part 3</b>: player instruct the NPC to use different medical supplies on Dr. Lee, which will determine the ending of the game</li>
-                    <li><b style="color:#666666">Epilogue</b>: the game have two endings: Dr. Lee wakes up or dies.</li>
+                    <li><b>Prologue</b>: setting up the stage for the conversation using a radio</li>
+                    <li><b>Part 1</b>: player ask various questions to understand the situation of the NPC</li>
+                    <li><b>Part 2</b>: player instruct the NPC to help Dr. Lee</li>
+                    <li><b>Part 3</b>: player instruct the NPC to use different medical supplies on Dr. Lee, which will determine the ending of the game</li>
+                    <li><b>Epilogue</b>: the game have two endings: Dr. Lee wakes up or dies.</li>
                     </ol>
                     <br/>
 
-                    <b>Adapting from a text adventure game</b><br/>
+                    <h2>Adapting from a text adventure game</h2>
                         The adaptation consist of the following process:
                     <ol>
-                        <li><b style="color:#666666">Analyse the entire scripts</b>, identify the possible intents that could be used to advance the dialogs, such as “HelloIntent”, “WhereIntent”, as well as Amazon built-in intent such as “NextIntent”.</li>
-                        <li><b style="color:#666666">Rearrange the scripts</b>, identify the dialogues that could be triggered by certain intent. For example, “This is Jesse Harper…” will be triggered by asking “who are you” at any point in the game.</li>
-                        <li><b style="color:#666666">Create the custom intents</b> according to the intent sheet, aggregate similar intents into one. For example, “AskHappen” and “AskExplain” are included in “AskSituation” intent.</li>
-                        <li><b style="color:#666666">Divide the story into several parts</b>, write the code to define the logic of each part (for detail of the logics, please refer to lambda.js in the Github repository</li>
+                        <li><b>Analyse the entire scripts</b>, identify the possible intents that could be used to advance the dialogs, such as “HelloIntent”, “WhereIntent”, as well as Amazon built-in intent such as “NextIntent”.</li>
+                        <li><b>Rearrange the scripts</b>, identify the dialogues that could be triggered by certain intent. For example, “This is Jesse Harper…” will be triggered by asking “who are you” at any point in the game.</li>
+                        <li><b>Create the custom intents</b> according to the intent sheet, aggregate similar intents into one. For example, “AskHappen” and “AskExplain” are included in “AskSituation” intent.</li>
+                        <li><b>Divide the story into several parts</b>, write the code to define the logic of each part (for detail of the logics, please refer to lambda.js in the Github repository</li>
                         <ul>
                             <li>Prologue: proceed to the next dialogue without parsing the intent</li>
                             <li>Part 1: identify the different questions asked by the player and give answers accordingly</li>
@@ -154,51 +155,51 @@
                             <li>Part 3: identify the item suggested by the player, such as antiseptic wipes or bottle for bad plants, which later is used to determine the ending of the game (Dr. Lee died or woke up)</li>
                             <li>Epilogue: proceed to the next dialogue without parsing the intent</li>
                         </ul>
-                        <li><b style="color:#666666">Replace the dialogues with audio clips</b></li>
+                        <li><b>Replace the dialogues with audio clips</b></li>
                     </ol>
                     <br/>
 
-                    <b>Alexa Intents</b><br/>
+                    <h2>Alexa Intents</h2>
                     <img style="max-height: 50em" src="image/below-alexa/all_intents.png" class="img-responsive image-shadow">
 
                     <a href="https://drive.google.com/open?id=1_FA8-4chXpUDwe8O2XWc2-WjsRt1gzCj" target="_blank" class="btn">Click to view pdf: <i>All_Intents_Graph.pdf</i> <i class="icon-share"></i></a>
                     <br/><br/>
-                    <b>Intents Explaination</b> <br/>
-                    6 built-in Intents, 13 custom intents, 3 slots and 14 different slot values was defined in the game:<br/>
-                    Amazon built-in intents
+                    <h2>Intents Explaination</h2>
+                    <p>6 built-in Intents, 13 custom intents, 3 slots and 14 different slot values was defined in the game:</p>
+                    <h3>Amazon built-in intents</h3>
                     <ul>
-                        <li><b style="color:#666666">AMAZON.HelpIntent</b>: prompt the player with hints to advance the conversation.</li>
+                        <li><b>AMAZON.HelpIntent</b>: prompt the player with hints to advance the conversation.</li>
                         <ul><li>“You can ask questions like  'Try the antiseptic' or 'Use the other bottles'”</li></ul>
-                        <li><b style="color:#666666">AMAZON.IgnoreAction</b>: reprompt the player with a question</li>
+                        <li><b>AMAZON.IgnoreAction</b>: reprompt the player with a question</li>
                         <ul><li>“Should I try the one for bad plant, or the one with plant image?”</li></ul>
-                        <li><b style="color:#666666">AMAZON.NextIntent</b>: instruct Jesse to continue the action, or in some cases simply advance the dialogue</li>
+                        <li><b>AMAZON.NextIntent</b>: instruct Jesse to continue the action, or in some cases simply advance the dialogue</li>
                         <ul><li>Sample utterances: “Good idea”, “Go ahead”</li></ul>
-                        <li><b style="color:#666666">AMAZON.RepeatIntent</b>: repeat the dialogue, with additional questions in the end</li>
+                        <li><b>AMAZON.RepeatIntent</b>: repeat the dialogue, with additional questions in the end</li>
                         <ul><li>“Sorry I wasn't very clear… (repeat dialogue) “</li></ul>
-                        <li><b style="color:#666666">AMAZON.StartOverIntent</b>: clear out the player’s progress and restart the game</li>
-                        <li><b style="color:#666666">AMAZON.StopIntent</b>: stop Jesse in performing an action</li>
+                        <li><b>AMAZON.StartOverIntent</b>: clear out the player’s progress and restart the game</li>
+                        <li><b>AMAZON.StopIntent</b>: stop Jesse in performing an action</li>
                     </ul>
                     <br/>
-                    Custom intents </br>
+                    <h3>Custom intents </h3>
                     <ul>
-                        <li><b style="color:#666666">AskSituation</b>: if the character slot is empty, respond with current situation; if the character slot is Lee, respond with her situation</li>
+                        <li><b>AskSituation</b>: if the character slot is empty, respond with current situation; if the character slot is Lee, respond with her situation</li>
                         <ul><li>Slot: Character</li></ul>
-                        <li><b style="color:#666666">AskWhat</b>: if the slot value is an item, respond with a description of the item; if the slot value is sense (either look or smell), respond with the description of the smell or the look of the wound</li>
+                        <li><b>AskWhat</b>: if the slot value is an item, respond with a description of the item; if the slot value is sense (either look or smell), respond with the description of the smell or the look of the wound</li>
                         <ul><li>Slot: Sense</li><li>Slot: Item</li></ul>
-                        <li><b style="color:#666666">AskWhere</b>: ask Jesse about where they are</li>
-                        <li><b style="color:#666666">AskWho</b>: respond with introduction</li>
-                        <li><b style="color:#666666">Command_Item</b>: instruct Jesse to use a specific item</li>
+                        <li><b>AskWhere</b>: ask Jesse about where they are</li>
+                        <li><b>AskWho</b>: respond with introduction</li>
+                        <li><b>Command_Item</b>: instruct Jesse to use a specific item</li>
                         <ul><li>Slot: Item</li></ul>
-                        <li><b style="color:#666666">Command_Move</b>: instruct Jesse to move Dr. Lee a bed, or lay her down</li>
-                        <li><b style="color:#666666">Command_Remove</b>: instruct Jesse to remove Dr. Lee’s pressurized suit</li>
-                        <li><b style="color:#666666">NoIntent</b>: same as StopIntent, instruct Jesse to stop performing an action</li>
-                        <li><b style="color:#666666">YesIntent</b>: agree with Jesse, instruct her to continue a task</li>
-                        <li><b style="color:#666666">Special_Breath</b>: asking about Dr. Lee’s breath</li>
-                        <li><b style="color:#666666">Special_Help</b>: independent to the built-in HelpIntent, inform Jesse to begin helping Dr. Lee (skip the questions in part 1 of the game)</li>
+                        <li><b>Command_Move</b>: instruct Jesse to move Dr. Lee a bed, or lay her down</li>
+                        <li><b>Command_Remove</b>: instruct Jesse to remove Dr. Lee’s pressurized suit</li>
+                        <li><b>NoIntent</b>: same as StopIntent, instruct Jesse to stop performing an action</li>
+                        <li><b>YesIntent</b>: agree with Jesse, instruct her to continue a task</li>
+                        <li><b>Special_Breath</b>: asking about Dr. Lee’s breath</li>
+                        <li><b>Special_Help</b>: independent to the built-in HelpIntent, inform Jesse to begin helping Dr. Lee (skip the questions in part 1 of the game)</li>
                         <ul><li>Sample utterances: “How can I help”, “What can I do”</li></ul>
-                        <li><b style="color:#666666">Special_Illegal</b>: a special intent that can trigger a specific part of the story--explaining the details of Jesse’s illegal research</li>
+                        <li><b>Special_Illegal</b>: a special intent that can trigger a specific part of the story--explaining the details of Jesse’s illegal research</li>
                         <ul><li>Sample utterances: “Why is it illegal”, “Are you breaking the law”</li></ul>
-                        <li><b style="color:#666666">WaitIntent</b>: instruct Jesse to wait for the medicine to take effect</li>
+                        <li><b>WaitIntent</b>: instruct Jesse to wait for the medicine to take effect</li>
                         <ul><li>Sample utterances: “Wait for a second”, “Maybe it takes a minute”</li></ul>
                     </ul>
 
@@ -213,7 +214,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><h1 class="text-center">Game Demo</h1>
+                            <a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><h1 class="text-center my-title">Game Demo</h1>
                             <p>and Intents Explaination</p>YouTube</a><a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><i class="icon-youtube"></i></a>
 
                         </div>
