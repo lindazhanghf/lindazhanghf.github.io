@@ -765,3 +765,13 @@ h1, h2, h3, h4, h5, h6 {
 .my-title {
  font-family: "Work Sans", Arial, sans-serif;
 }
+
+.line-divider {
+  height: 1px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #cccccc;
+  margin-bottom: 1.5em;
+}
