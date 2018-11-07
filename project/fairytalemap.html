@@ -86,23 +86,19 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h2>Fairy Tale Map</h2>
-                        <!-- <h3>Final Project for <i>Principles of Interaction Design</i></h3> -->
-                        <h3>Data visualization project using <i>DPLA</i></h3>
-
-                          <p> This program was created using Processing, a Java-based programming language to program images, animation, and interactivity. www.processing.org </p>
-
+                        <h3>Data visualization project</h3>
                           <p>
-                            A data visualization project that parse the data collected via a search query to the Digital Public Library of America and visualize using a world map. The data were categorized by the animals that appeared in the fairy tales and the country that the fairy tale is from.</p>
+                            In this project, I collected data via a search query to the Digital Public Library of America and visualized them using a world map. The data were categorized by the animals that appeared in the fairy tales and the country that the fairy tale is from.</p>
                           <p>
-                            I am using a nested hash table as the data structure for storing the data, I got a list of common animals from Wikipedia and saved them in a csv file. The program will generate search queries with the key word “fairy tale” and animals. The results will be grouped by locations, put into the first hash table using country name as the key, and then be grouped by species, put into the second hash table.</p>
+                            I used a nested hash table as the data structure for storing the data, I got a list of common animals from Wikipedia and saved them in a csv file. The program will generate search queries with the key word “fairy tale” and animals. The results will be grouped by locations, put into the first hash table using country name as the key, and then be grouped by species, put into the second hash table.</p>
                           <p>
                             After parsing the data from the search query, the program will search for images of the animals on DPLA or on a list of URLs I found online. However, I ended up searching for all the images manually as the images  found on DPLA are either unrelated to the subject or in low resolution.</p>
 
-                            <!-- This interactive web app is created using:
+                            This interactive web app is created using:
                         <ul class="fh5co-check">
                             <li>Processing</li>
-                            <li>AngularJS 4</li>
-                        </ul> -->
+                            <li>Digital Public Library of America API</li>
+                        </ul>
 
                         <a href="https://github.com/lindazhanghf/FairyTalesMap" target="_blank" class="btn">View source code on GitHub <i class="icon-github"></i></a>
 
@@ -136,27 +132,22 @@
 
         <div class="fh5co-section">
             <div class="container">
-                <div class="row">
+                <!-- <div class="row"> -->
+                <h3>Overview</h3>
+                Country colored in green indicates that at least one fairy tale was found for this country, grey indicates that no fairy tales were found.<br />
+                Each country has a circular thumbnail showing the dominant animal species of that country.
+                <img src="image/fairytalemap/overview.png" class="img-responsive image-shadow">
+                <br/><h3>Dominant Animal of that Country</h3>
+                Hover the mouse over any thumbnail will display the full image, showing the animal with the max number of results found for that country (Russia in this case).
+                <img src="image/fairytalemap/hover_image.png" class="img-responsive image-shadow">
+                <br/><h3>List of Fairy Tales</h3>
+                Click on any country with green color will bring up a table containing the detailed information found for each country, grouped by animals (Germany in this case).
+                <img src="image/fairytalemap/fairytale_list.png" class="img-responsive image-shadow">
+                <br/><h3>Detail of Each Fairy Tale</h3>
+                Click on any box with a title that interests you will bring you directly to the DPLA web page of that fairy tale.
+                <img src="image/fairytalemap/dpla_page.png" class="img-responsive image-shadow">
 
-                        <p>
-                        Navigating through the program is very straightforward:
-                        </p>
-
-                        <b>Overview</b> <br/>
-                        Country colored in green indicates that at least one fairy tale was found for this country, grey indicates that no fairy tales were found.<br />
-                        Each country has a circular thumbnail showing the dominant animal species of that country.
-                        <img src="image/fairytalemap/overview.png" class="img-responsive image-shadow">
-                        <br/><b>View Dominant Animal of that Country</b> <br/>
-                        Hover the mouse over any thumbnail will display the full image, showing the animal with the max number of results found for that country (Russia in this case).
-                        <img src="image/fairytalemap/hover_image.png" class="img-responsive image-shadow">
-                        <br/><b>View List of Fairy Tales</b> <br/>
-                        Clicking on any country with green color will bring up a table containing the detailed information found for each country, grouped by animals (Germany in this case).
-                        <img src="image/fairytalemap/fairytale_list.png" class="img-responsive image-shadow">
-                        <br/><b>View Detail of the Fairy Tale</b> <br/>
-                        clicking on any box with a title that interests you will bring you directly to the DPLA web page of that fairy tale.
-                        <img src="image/fairytalemap/dpla_page.png" class="img-responsive image-shadow">
-
-                </div>
+                <!-- </div> -->
             </div>
         </div>
 
