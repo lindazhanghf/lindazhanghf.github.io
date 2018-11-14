@@ -47,6 +47,20 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('a[href^="#"]').click(function(e) {
+                e.preventDefault();
+                var target = this.hash, $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+
     </head>
     <body>
 
@@ -83,7 +97,7 @@
         <div class="gtco-section border-bottom">
             <div class="gtco-container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading" id="VR">
                         <h1>VR Development</h1>
                     </div>
                 </div>
@@ -109,7 +123,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="ZenWave"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>Brain-Computer Interaction Experience</h1>
                     </div>
@@ -144,7 +158,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="masters-project"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>Designing of VR Gesture Interface</h1>
                     </div>
@@ -175,7 +189,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="physical-prototyping"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>Physical Prototyping</h1>
                     </div>
@@ -202,7 +216,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="interaction-design"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>Interaction Design</h1>
                     </div>
@@ -230,7 +244,7 @@
 
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="front-end"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>Front-end Web Development</h1>
                     </div>
@@ -253,7 +267,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="line-divider"></div>
+                    <div class="line-divider" id="projects"></div>
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h1>More projects and games</h1>
                     </div>
