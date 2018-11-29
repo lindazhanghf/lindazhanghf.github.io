@@ -48,6 +48,19 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('a[href^="#"]').click(function(e) {
+                e.preventDefault();
+                var target = this.hash, $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
     </head>
     <body>
 
@@ -85,7 +98,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h2>Night Photography</h2>
+                        <h2>Photography</h2>
+                        <a href="artwork/photography.html">Night Photography</a>
                     </div>
                     <div class="col-md-7">
                         <a href="artwork/photography.html">
@@ -101,7 +115,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-md-push-8">
-                        <h2>Graphic Design </h2>
+                        <h2>Graphic Design</h2>
+                        <a href="artwork/war&peace.html">War and Peace</a>
                     </div>
                     <div class="col-md-7 col-md-pull-5">
                         <a href="artwork/war&peace.html">
@@ -113,14 +128,29 @@
         </div>
 
         <div class="fh5co-section">
+            <div class="container" id="drawing">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Drawings</h2>
+                        A collage of my drawings<br/><br/> Used as the infinite scrolling map in my game <a href="game.html#Canvas">Canvas</a>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="artwork/image/drawing_map.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h2>Sculpture</h2>
-                    </div>
-                    <div class="col-md-5">
                         <img src="artwork/image/sculpture.jpg" class="img-responsive ">
-                        The Flow of Life. Marble. 2014.
+                        <i>The Flow of Life. Marble. 2014.</i>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <h2>Sculpture</h2>
                     </div>
                 </div>
             </div>
