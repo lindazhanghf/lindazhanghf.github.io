@@ -93,18 +93,17 @@
 
                           <p> For inspirations, I searched and played the top-rated games on Alexa, and came accross the interactive adventure game The Magic Door. I was impressed by the voice interaction within the game, but at the same time, I felt restricted by the limited options and the robotic responses. Thus, I decided to build an interactive game without such restrictions. </p>
 
-                          <p>The solution is Below, an interactive narrative game played by talking to Jesse through the radio, asking questions and giving suggestions along the way to change the story. It was an adaptation from a text-based adventure game created by Emily Nguyen, one of my classmates from Game Design class in Georgia Tech:<a href="https://belowapp.wordpress.com" target="_blank" class="btn">Original iOS game <i class="icon-share"></i></a>.</p>
+                          <p>The solution is Below, an interactive narrative game played by talking to Jesse through the radio, asking questions and giving suggestions along the way to change the story. It was an adaptation from a text-based adventure game created by Emily Nguyen, one of my classmates from Game Design class in Georgia Tech:<a href="https://belowapp.wordpress.com" target="_blank" class="btn">Original iOS game <i class="icon-share"></i></a></p>
 
 
-                          <p>The story is about Jesse, who is facing some serious problems in a submarine, hundreds of thousands of feet below the surface of the sea. Her companion Dr. Lee was unconscious due to a mysterious plant. The player’s job is to use the radio to communicate with Jesse (by talking to Alexa), give her instructions on how to save Dr. Lee, and discover the secrets of their research along the way.</p>
+                          <p>The story is about Jesse (voiced by Alexa), who is facing some serious problems in a submarine, hundreds of thousands of feet below the surface of the sea. Her companion Dr. Lee was unconscious due to a mysterious plant. The player’s job is to use the radio to communicate with Jesse (by speaking to Alexa), give her instructions on how to save Dr. Lee, and discover the secrets of their research along the way.</p>
 
                             <!-- This interactive web app is created using: -->
                         <ul class="fh5co-check">
                             <li>Built for Amazon Alexa</li>
                             <li>Original Story by Emily Nguyen</li>
-                            <li>Original Interactive Storyline Logic</li>
-                            <li>Built on AWS Lambda</li>
-                            <li>Used DynamoDB to save player's progress </li>
+                            <li>Original Interactive Story Game Engine</li>
+                            <li>Built on AWS Lambda, used DynamoDB to save player's progress </li>
                         </ul>
 
                         <a href="https://github.com/lindazhanghf/below-alexa-game" target="_blank" class="btn">View source code on GitHub <i class="icon-github"></i></a>
@@ -131,47 +130,49 @@
         <div class="fh5co-section">
             <div class="container">
                 <div class="row" style="color:black">
-                    <h2>The story</h2>
-                    The game is consist of 5 parts:
-                    <ol>
-                    <li><b>Prologue</b>: setting up the stage for the conversation using a radio</li>
-                    <li><b>Part 1</b>: player ask various questions to understand the situation of the NPC</li>
-                    <li><b>Part 2</b>: player instruct the NPC to help Dr. Lee</li>
-                    <li><b>Part 3</b>: player instruct the NPC to use different medical supplies on Dr. Lee, which will determine the ending of the game</li>
-                    <li><b>Epilogue</b>: the game have two endings: Dr. Lee wakes up or dies.</li>
-                    </ol>
-                    <br/>
-
                     <h2>Adapting from a text adventure game</h2>
-                        The adaptation consist of the following process:
-                    <ol>
-                        <li><b>Analyse the entire scripts</b>, identify the possible intents that could be used to advance the dialogs, such as “HelloIntent”, “WhereIntent”, as well as Amazon built-in intent such as “NextIntent”.</li>
-                        <li><b>Rearrange the scripts</b>, identify the dialogues that could be triggered by certain intent. For example, “This is Jesse Harper…” will be triggered by asking “who are you” at any point in the game.</li>
-                        <li><b>Create the custom intents</b> according to the intent sheet, aggregate similar intents into one. For example, “AskHappen” and “AskExplain” are included in “AskSituation” intent.</li>
-                        <li><b>Divide the story into several parts</b>, write the code to define the logic of each part (for detail of the logics, please refer to lambda.js in the Github repository</li>
-                        <ul>
-                            <li>Prologue: proceed to the next dialogue without parsing the intent</li>
-                            <li>Part 1: identify the different questions asked by the player and give answers accordingly</li>
-                            <li>Part 2: identify the questions asked by the players; identify the suggestions made by the player such as removing or keeping the pressurized suit. (Note: this part was not implemented due to time constraints, so there is not branches)</li>
-                            <li>Part 3: identify the item suggested by the player, such as antiseptic wipes or bottle for bad plants, which later is used to determine the ending of the game (Dr. Lee died or woke up)</li>
-                            <li>Epilogue: proceed to the next dialogue without parsing the intent</li>
-                        </ul>
-                        <li><b>Replace the dialogues with audio clips</b></li>
-                    </ol>
-                    <br/>
+                        <p><b>Analyze the entire scripts</b>, identify the possible intents that could be used to advance the dialogs, such as “HelloIntent”, “WhereIntent”, as well as Amazon built-in intent such as “NextIntent”.</p>
+                        <p><b>Rearrange the scripts</b>, identify the dialogues that could be triggered by certain intent. For example, “This is Jesse Harper…” will be triggered by asking “who are you” at any point in the game.</p>
+                        <p><b>Create the custom intents</b> according to the intent sheet, group similar intents into classes. For example, “AskHappen” and “AskExplain” are included in “AskSituation” intent.</p>
+                        <p><b>Divide the story into 5 acts</b>, define the logic of how the story proceed differently in each act.</p>
+                        <p><b>Program the game in Alexa</b>, write a specialized game engine that handles Alexa intent and dialogue selection.</p>
 
-                    <h2>Alexa Intents</h2>
+                    <br/>
+                    <h2>The story</h2>
+                    The final game is consist of 5 acts:
+                    <ul>
+                    <ul>
+                        <li><b>Prologue</b>: setting up the stage for the conversation using a radio</li>
+                        <li><b>Part 1</b>: player ask various questions to understand the situation of the NPC</li>
+                        <li><b>Part 2</b>: player instruct the NPC to help Dr. Lee</li>
+                        <li><b>Part 3</b>: player instruct the NPC to use different medical supplies on Dr. Lee, which will determine the ending of the game</li>
+                        <li><b>Epilogue</b>: the game have two endings: Dr. Lee wakes up or dies.</li>
+                    </ul>
+                    </ul>
+                    <br/>
+                    Jesse (NPC) responds differently to the player in each act:
+                    <ul>
+                        <ul>
+                            <li><b>Prologue</b>: proceed to the next dialogue without parsing the intent</li>
+                            <li><b>Part 1</b>: identify the different questions asked by the player and give answers accordingly</li>
+                            <li><b>Part 2</b>: identify the questions asked by the players; identify the choices made by the player (such as removing or keeping the pressurized suit).</li>
+                            <li><b>Part 3</b>: identify the item suggested by the player, such as aseptic wipes or bottle for bad plants. The combination of used items will determine the ending of the game (Dr. Lee died or woke up).</li>
+                            <li><b>Epilogue</b>: proceed to the next dialogue without parsing the intent.</li>
+                        </ul>
+                    </ul>
+                    <br />
+                    <h2>Intent Sheet</h2>
                     <img style="max-height: 50em" src="image/below-alexa/all_intents.png" class="img-responsive image-shadow">
 
                     <a href="https://drive.google.com/open?id=1_FA8-4chXpUDwe8O2XWc2-WjsRt1gzCj" target="_blank" class="btn">Click to view pdf: <i>All_Intents_Graph.pdf</i> <i class="icon-share"></i></a>
                     <br/><br/>
-                    <h2>Intents Explaination</h2>
+                    <h2>Intents Explanation</h2>
                     <p>6 built-in Intents, 13 custom intents, 3 slots and 14 different slot values was defined in the game:</p>
                     <h3>Amazon built-in intents</h3>
                     <ul>
                         <li><b>AMAZON.HelpIntent</b>: prompt the player with hints to advance the conversation.</li>
                         <ul><li>“You can ask questions like  'Try the antiseptic' or 'Use the other bottles'”</li></ul>
-                        <li><b>AMAZON.IgnoreAction</b>: reprompt the player with a question</li>
+                        <li><b>AMAZON.IgnoreAction</b>: re-prompt the player with a question</li>
                         <ul><li>“Should I try the one for bad plant, or the one with plant image?”</li></ul>
                         <li><b>AMAZON.NextIntent</b>: instruct Jesse to continue the action, or in some cases simply advance the dialogue</li>
                         <ul><li>Sample utterances: “Good idea”, “Go ahead”</li></ul>
@@ -215,8 +216,8 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><h1 class="text-center my-title">Game Demo</h1>
-                            <p>and Intents Explaination</p>YouTube</a><a target="_blank" href="https://youtu.be/IkNuhpfJKe8"><i class="icon-youtube"></i></a>
+                            <a target="_blank" href="https://youtu.be/_XJvzTejFyY"><h1 class="text-center my-title">Game Demo</h1>
+                            <p>and Intents Explaination</p>YouTube</a><a target="_blank" href="https://youtu.be/_XJvzTejFyY"><i class="icon-youtube"></i></a>
 
                         </div>
                     </div>
@@ -227,9 +228,9 @@
         <div class="fh5co-section">
             <div class="container">
                 Due to time constraints, I was unable to find an actor to do the voice of Jesse. The next step of development is do the recordings for Jesse and add sound effects, and add more branches to part 2 of the game.
-                <br/><br/><b>Appendix: <br/>
-                </b> Original Intent Analysis<br/>
-                <a href="https://drive.google.com/open?id=1efX6jata249cw0ttStJRbe5FJGTwfC9L" target="_blank" class="btn">Click to view Intent Analysis <i class="icon-share"></i><br/><br/></a>
+                <br/><br/><b>Appendix:</b><br/>
+                First Version of Intent Analysis
+                <a href="https://drive.google.com/open?id=1efX6jata249cw0ttStJRbe5FJGTwfC9L" target="_blank" class="btn">Intent Analysis <i class="icon-share"></i><br/><br/></a>
             </div>
         </div>
 
