@@ -7,7 +7,7 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ziyin Zhang &mdash; VR Barista Training</title>
+    <title>Ziyin Zhang &mdash; UX Design in VR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Ziyin Zhang portfolio" />
     <meta name="keywords" content="Ziyin Zhang portfolio" />
@@ -86,9 +86,9 @@
                 <div class="row">
                     <h1>What I learned from VR game development</h1>
                     <div class="col-md-8">
-                        <p>
+                        <!-- <p> -->
                             I worked on <i>Stay Alive: Live</i> during the second half of my internship at Moxie.<br/> This VR game is designed to fill the gap in VR games and Twitch streaming. Using a giant retro-style chat window, the players are able to see their Twitch audience's response without taking off their headset.
-                        </p>
+                        <!-- </p> -->
 
                         <p>
                         <!-- My responsibility includes evaluating the gameplay and fixing any issues in order to get the game into a good state to be released on Steam. Here is some of my thoughts along the way: -->
@@ -104,13 +104,15 @@
                 </div>
                 <div class="row" style="color:black; margin-top: 1em">
                     <h2>Usability Heuristics should be fully evaluated</h2>
+                    <div class="col-md-12">
                     <p>Ever felt lost in a VR game? I certainly have. More than once have I started the VR experience standing in a dark room or some fancy sci-fi space, looking around and still not a clue of what to do.
                     </p>
                     <p>
                     When users move from 2D screens to 3D immersives, the interface is no longer familiar to them. Since VR is still a relatively new medium, there are less conventions in user experience design across applications. Luckily, the 10 Usability Heuristics can still applied here and I found them to be highly valuable when developing the VR game during my internship.
                     </p>
-
+                    </div>
                     <h3><b>Visibility of System Status</b></h3>
+                    <div class="col-md-12">
                     <p>
                     VR doesn’t have a standard of way of displaying system status, like breadcrumbs in web design or tab icons in app design. There’s no “status bar” to place information in a 3D world.
                     <br/>
@@ -120,24 +122,28 @@
                     <br/>
                     I explored different ways to solve this problem and ended up <b>using audio prompts</b>. Since our game already have a “virtual host” that guides the player through the game and makes random commentaries, we decided to go with the same theme and have the host explain the current status to the player. In addition to <b>informing the player that audience is voting on the upcoming level</b>, the host will also entertain the player by commenting on the voting process.
                     </p>
+                    </div>
                 </div>
                 <div class="row" style="color:black; margin-top: 1em ">
                     <h3><b>User Control and Freedom</b></h3>
+                    <div class="col-md-12">
                     <p>
                     There isn’t a convenient place to put the “X” Exit button in VR, nor a Back button. In many VR applications, once you’ve selected an option, you just had to go with it or restart the experience.
                     <br/>
                     <br/>
 
-                    When play-testing our VR game, I noticed that there is no way to exit out of the game or to open up the main menu. Both the trigger and the trackpad button on Vive controller is occupied by game controls, so there is no other useful button to put the main menu.
+                    When play-testing our VR game, I noticed that there is no way to exit out of the game or to open up the main menu. Both the trigger and the trackpad button on Vive controller is occupied by game controls, so there is no where else to put the main menu button.
                     <br/>
                     <br/>
 
-                    After talking to the designer about this issue, we decided to keep the way it is, since “this game is basically to troll you.” But we ended up adding an audio prompt to inform players that they can <b>exit the game by “killing themselves”</b>.
+                    After talking to the designer about this issue, we decided to keep the way it is, since “this game is basically to troll you.” But we ended up adding an audio prompt to inform players that they can <b>return to main menu</b> by “killing themselves in the game”.
                     </p>
+                    </div>
                 </div>
 
                 <div class="row" style="margin-top: 1em">
                     <h3><b>Error Prevention</b></h3>
+                    <div class="col-md-12">
                     <p>
                     In my own experience, the precision of “pull trigger to select” on the controller is lower than “click to select” using a mouse on a computer screen. Sometimes when my controller is pointing at one option, after I pull the trigger causing a slight muscle movement, my controller is shifted downwards and I ended up selecting the option underneath it.
                     <br/>
@@ -149,8 +155,15 @@
 
                     Here I am proposing another solution to this problem: <b>register the “click” event when the player <i>starts</i> to pull the trigger</b>, not when the trigger button is released. This way it eliminates the possible controller movement that could cause by clicking or squeezing the controller.
                     </p>
+                    </div>
                 </div>
-            </div>
+<!--                 <div class="row" style="margin-top: 1em">
+                    <h3><b>Other Usability Heuristics</b></h3>
+                    <div class="col-md-12">
+                    The above three usability heuristics are the ones that I found the most useful when evaluating the interface. Other heuristics are applicable to VR as well, such as "Aesthetic and minimalist design" which is even more important in VR than 2D design space, since the virtual space can feel cluttered real quick as more information are added.
+                    </div>
+                </div>
+ -->            </div>
         </div>
 
         <div class="fh5co-parallax" style="background-image: url(image/barista-training/white_bg.jpg);" data-stellar-background-ratio="0">
@@ -184,6 +197,7 @@
             <div class="container">
                 <div class="row">
                     <h2>Details are important</h2>
+                    <div class="col-md-12">
                     <p>
                         Unlike other mediums, the immersiveness of virtual reality gives users the most unique experience, but at the same time magnifies the tiniest glitches and inconsistencies. Your game could look perfectly fine in the Unity3D window, but once you put on that headset, the bugs become a lot noticeable simple because “it doesn’t feel right.”
                         <br/><br/>
@@ -202,6 +216,7 @@
                     <p>
                         A problem that I found in our game is player could throw batteries (the key to solve the puzzle) onto certain places that's <b>unreachable by the player</b>. Since the batteries doesn't respawn unless they are destroyed, that round became unsolvable. I used a simple solution without changing much in the game: <b>make all surfaces slippery</b> for the batteries, so they will <b>always fall along the sides</b> and eventually get destroyed when they hit the bottom of the game board.
                     </p>
+                    </div>
                 </div>
             </div>
         </div>
