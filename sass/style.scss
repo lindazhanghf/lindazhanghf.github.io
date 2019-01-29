@@ -2,7 +2,7 @@ $font-primary: 'Work Sans', Arial, sans-serif;
 
 
 $brand-primary: #52d3aa !default;
-$brand-secondary: #3f95ea !default; 
+$brand-secondary: #3f95ea !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -43,16 +43,16 @@ $footer-height: 450px;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -67,7 +67,7 @@ $footer-height: 450px;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -79,10 +79,10 @@ $footer-height: 450px;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -91,7 +91,7 @@ $footer-height: 450px;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -111,7 +111,7 @@ body {
 		font-size: 17px;
 		line-height: 1.5;
 	}
-	
+
 }
 a {
 	color: $brand-primary;
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: $brand-black;
 	font-family: $font-primary;
 	font-weight: 300;
-	margin: 0 0 30px 0;
+	margin: 0 0 30px 10px;
 }
 ::-webkit-selection {
   color: $brand-white;
@@ -254,8 +254,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fh5co-table,
-.fh5co-table-cell,	
-.fh5co-hero, 
+.fh5co-table-cell,
+.fh5co-hero,
 .fh5co-parallax {
 	height: 670px;
 }
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 	@media screen and (max-width: $screen-sm) {
 		height: inherit;
 		padding: 4em 0;
-	}	
+	}
 	.fh5co-intro {
 		h1 {
 			color: $brand-white;
@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 			padding: 0;
 		}
 		h3 {
-			
+
 			margin-bottom: 20px;
 			color: rgba(0,0,0,.8);
 		}
@@ -570,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #map {
 	width: 100%;
-	height: 700px;	
+	height: 700px;
 	@media screen and (max-width: $screen-sm) {
 		height: 200px;
 	}
@@ -593,11 +593,11 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 4em;
 	@media screen and (max-width: $screen-sm ) {
 		padding-bottom: 2em;
-	}	
+	}
 }
 .row-bottom-padded-sm {
 	padding-bottom: 2em;
 	@media screen and (max-width: $screen-sm ) {
 		padding-bottom: 2em;
-	}	
+	}
 }
