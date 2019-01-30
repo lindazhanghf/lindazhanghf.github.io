@@ -47,7 +47,19 @@
     <!--[if lt IE 9]>
     <script src="../js/respond.min.js"></script>
     <![endif]-->
-
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('a[href^="#"]').click(function(e) {
+                e.preventDefault();
+                var target = this.hash, $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
     </head>
     <body>
 
@@ -166,20 +178,9 @@
  -->            </div>
         </div>
 
-        <div class="fh5co-parallax" style="background-image: url(image/barista-training/white_bg.jpg);" data-stellar-background-ratio="0">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
-                        <div class="fh5co-intro fh5co-table-cell">
-                            <h1 class="text-center my-title" style="color:black">Other Thoughts</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-<!--         <div class="fh5co-parallax" style="background-image: url(image/barista-training/white_bg.jpg);" data-stellar-background-ratio="0">
+
+       <!--  <div id="ui" class="fh5co-parallax" style="background-image: url(image/white_bg_cropped.jpg);" data-stellar-background-ratio="0">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -191,9 +192,48 @@
                 </div>
             </div>
         </div>
- -->
 
-    <div class="fh5co-section">
+
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row">
+                    <h2>What I learned from VR Training Projects</h2>
+                    <div class="col-md-8">
+                            As a VR Development Intern at Foundry45, I am working on VR training applications that aims to reduce the cost of training materials, teach trainees aseptic lab standard practices, and test their knowledge on performing critical tasks.
+                        <p>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="fh5co-check">
+                            <li>VR User Interface</li>
+                            <li>VR development</li>
+                            <li>QA testing and evaluation</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12">
+                    <b>Bad</b>
+                    <p>
+                    2D screens, interactions without laser pointers, traditional user interfaces such as keyboard typing, scroll bar, etc.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="ui" class="fh5co-parallax" style="background-image: url(image/sal_cropped.png);" data-stellar-background-ratio="0">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                        <div class="fh5co-intro fh5co-table-cell">
+                            <h1 class="text-center my-title">Other Thoughts</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fh5co-section">
             <div class="container">
                 <div class="row">
                     <h2>Details are important</h2>
@@ -220,7 +260,6 @@
                 </div>
             </div>
         </div>
-
     </div> <!-- END fh5co-wrap -->
 
 
