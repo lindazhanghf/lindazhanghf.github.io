@@ -784,7 +784,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1000px) {
   .visible-mobile {
     display: block !important;
-    background-position: 0 0;
+    /* background-position: 0 0; */
   }
 
   .hidden-mobile {
