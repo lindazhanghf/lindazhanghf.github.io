@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   background-size: cover;
   position: relative;
+  background-position: 50% 0%;
 }
 .fh5co-hero .overlay, .fh5co-parallax .overlay {
   position: absolute;
@@ -774,4 +775,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   background-color: #cccccc;
   margin-bottom: 1.5em;
+}
+
+.visible-mobile {
+  display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .visible-mobile {
+    display: block !important;
+    background-position: 0 0;
+  }
+
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+.pivot-left {
+    background-position: 0 0;
 }
