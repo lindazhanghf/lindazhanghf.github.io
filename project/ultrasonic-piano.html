@@ -66,7 +66,7 @@
             </div>
         </header>
 
-        <div class="fh5co-hero" style="background-image: url(image/piano/prototype_final.jpg);" data-stellar-background-ratio="0.5">
+        <div class="fh5co-hero" style="background-image: url(image/piano/prototype_final.jpg);" data-stellar-background-ratio="0">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -92,7 +92,7 @@
                           <h4> <i>Our inspiration</i></h4>
                           <img src="image/piano/insporation.png" class="img-responsive image-shadow"><br/>
 
-                            <p> With these questions in mind, we created a working system that is an extensive modification of the Instructable project &mdash; <a href="http://www.instructables.com/id/Ultrasonic-Pi-Piano-With-Gesture-Controls/" target="_blank">Ultrasonic Piano Pi Piano with Gesture Controls</a>. </p>
+                            <p> With these questions in mind, we created a working system that is an extensive modification of the <i>Instructable</i> project &mdash; <a href="http://www.instructables.com/id/Ultrasonic-Pi-Piano-With-Gesture-Controls/" target="_blank">Ultrasonic Piano Pi Piano with Gesture Controls</a>. </p>
 
                             <p> We decided to add a light sensor onto the ultrasonic pi piano in order to sense the surrounding illuminations in the environment. The luminasity data is used to change the instrument of the piano: lower luminasity corresponds to a more somber instrument, such as cello; higher luminasity corresponds to a more cheerful instrument, such as violine and Xylophone.</p>
                     </div>
@@ -129,13 +129,13 @@
             </div>
         </div>
 
-        <div class="fh5co-parallax" style="background-image: url(image/piano/final_setup.jpg);" data-stellar-background-ratio="0.5">
+        <div class="fh5co-parallax" style="background-image: url(image/piano/final_setup.jpg);" data-stellar-background-ratio="0">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
                     <div  class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <h1 class="text-center my-title">Final Prototype</h1>
+                            <h1 class="text-center my-title">Development Process</h1>
                             <p>And challenges we faced during the project</p>
                         </div>
                     </div>
@@ -146,39 +146,39 @@
         <div class="fh5co-section">
             <div class="container">
                 <div class="row">
-                        <div class="col-md-4"><img src="image/piano/rust.png" class="img-responsive image-shadow"></div>
-                        <div class="col-md-8">
-                            <b>Challenge 1: Rust programming language </b> <br/>
-                            <p>The base code of the Instructable project we were able to find is written in Rust, a programming language that none of us knew how to use. Its syntax is similar to C++, but it is also a language that we were not familiar with. This add difficulties to the "hacking" part of our project, but we was managed to figure out the code in a short period of time and add more functionailities to the piano.</p>
-                        </div>
-                        <div class="col-md-2"><img style="max-width: 150px" src="image/piano/i2c_logo.jpg" class="img-responsive image-shadow"> </div>
-                        <div class="col-md-2"><img style="max-width: 150px" src="image/piano/raspberry-pi-logo.jpg" class="img-responsive image-shadow"></div>
-                        <div class="col-md-8">
-                            <b>Challenge 2: I2C bug in Raspberry Pi</b> <br/>
-                            <p>Raspberry Pi has a serious bug in its I2C implementation which can (a) prevent I2C communication with some devices and (b) lead to data corruption, according to <a href="http://www.advamation.com/knowhow/raspberrypi/rpi-i2c-bug.html" target="_blank">Advamation</a>.</p>
-                        </div>
-                        <div style="padding-top: 1em">
-                            <b>Challenge 3: Lack of hardware libraries in Rust</b> <br/>
-                            <p>Some sensors do not use clock-stretching and thus can be used on Raspberry Pi. There are a few Rust libraries that implemented I2C to use with some of the popular sensors such as accelerometer. However, STL2561 light sensor is not one of them. With the I2C bug and unfamiliarity with Rust, we have to find other ways to implement the light sensor.</p>
-                        </div>
-                        <b>Our solution:</b> <br/>
-                        Step 1: Test light sensor using Arduino (here we are using Teensy 3.1 board)
-                        <img style="max-height: 200px" src="image/piano/teensy.jpg" class="img-responsive image-shadow">
-                        <br />Step 2: Output light sensor data to serial port
-                        <img style="max-height: 200px" src="image/piano/test_light.png" class="img-responsive image-shadow">
-                        <br />Step 3: Read serial port in Rust on Raspberry Pi
-                        <img style="max-height: 200px" src="image/piano/read_pi.png" class="img-responsive image-shadow">
+                    <div class="col-md-4"><img src="image/piano/rust.png" class="img-responsive image-shadow"></div>
+                    <div class="col-md-8">
+                        <b>Challenge 1: Rust programming language </b> <br/>
+                        <p>The base code of the <i>Instructable</i> project we were able to find is written in Rust, a programming language that none of us knew how to use. Its syntax is similar to C++, but it is also a language that we were not familiar with. This add difficulties to the "hacking" part of our project, but we was managed to figure out the code in a short period of time and add more functionailities to the piano.</p>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><img style="max-width: 150px" src="image/piano/i2c_logo.jpg" class="img-responsive image-shadow"> </div>
+                    <div class="col-md-2 col-sm-3 col-xs-6"><img style="max-width: 150px" src="image/piano/raspberry-pi-logo.jpg" class="img-responsive image-shadow"></div>
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <b>Challenge 2: I2C bug in Raspberry Pi</b> <br/>
+                        <p>Raspberry Pi has a serious bug in its I2C implementation which can (a) prevent I2C communication with some devices and (b) lead to data corruption, according to <a href="http://www.advamation.com/knowhow/raspberrypi/rpi-i2c-bug.html" target="_blank">Advamation</a>.</p>
+                    </div>
+                    <div class="col-md-12" style="padding-top: 2em">
 
-                        <br />Finally step: Set luminosity range and change instrument during runtime
-                        <!-- <img src="image/piano/piano_published.png" class="img-responsive image-shadow"> -->
+                        <b>Challenge 3: Lack of hardware libraries in Rust</b> <br/>
+                        <p>Some sensors do not use clock-stretching and thus can be used on Raspberry Pi. There are a few Rust libraries that implemented I2C to use with some of the popular sensors such as accelerometer. However, STL2561 light sensor is not one of them. With the I2C bug and unfamiliarity with Rust, we have to find other ways to implement the light sensor.</p>
+                    <b>Our solution:</b> <br/>
+                    Step 1: Test light sensor using Arduino (here we are using Teensy 3.1 board)
+                    <img style="max-height: 200px" src="image/piano/teensy.jpg" class="img-responsive image-shadow">
+                    <br />Step 2: Output light sensor data to serial port
+                    <img style="max-height: 200px" src="image/piano/test_light.png" class="img-responsive image-shadow">
+                    <br />Step 3: Read serial port in Rust on Raspberry Pi
+                    <img style="max-height: 200px" src="image/piano/read_pi.png" class="img-responsive image-shadow">
 
-                    <!-- </div> -->
+                    <br />Finally step: Set luminosity range and change instrument during runtime
+                    <!-- <img src="image/piano/piano_published.png" class="img-responsive image-shadow"> -->
+                    </div>
+
                 </div>
             </div>
         </div>
 
 
-        <div class="fh5co-parallax" style="background-image: url(image/piano/prototype_closeup.jpg);" data-stellar-background-ratio="0.5">
+        <div class="fh5co-parallax" style="background-image: url(image/piano/prototype_closeup.jpg);" data-stellar-background-ratio="0">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -224,7 +224,7 @@
             </div>
         </div>
 
-        <div class="fh5co-parallax" style="background-image: url(image/piano/demo.png);" data-stellar-background-ratio="0.5">
+        <div class="fh5co-parallax" style="background-image: url(image/piano/demo.png);" data-stellar-background-ratio="0">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
