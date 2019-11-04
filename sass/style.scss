@@ -1,4 +1,4 @@
-$font-primary: 'Work Sans', Arial, sans-serif;
+$font-primary: 'Nunito', Arial, sans-serif;
 
 
 $brand-primary: #52d3aa !default;
@@ -125,8 +125,14 @@ a {
 p {
 	margin-bottom: 1.5em;
 }
+h1 {
+	color: $brand-black;
+	font-family: $font-primary;
+	font-weight: 200;
+	margin: 0 0 30px 10px;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	color: $brand-black;
 	font-family: $font-primary;
 	font-weight: 300;
