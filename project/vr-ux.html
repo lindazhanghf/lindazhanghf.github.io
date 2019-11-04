@@ -124,10 +124,10 @@
                     VR doesn’t have a standard of way of displaying system status, like breadcrumbs in web design or tab bars in mobile app design. There’s no “status bar” to place information in a 3D world.
                     <br/>
                     <br/>
-                    I found this problem when I first play-tested our VR game. Before each round begins, there is a 24 seconds voting period where the player is essentially waiting for the Twitch audience to vote on level difficulty. There is no countdown clock or any other method to show the progress, leaving the player to feel bored and confused. This is a problem is caused by not displaying the current system status.
+                    I found this problem when I first play-tested our VR game. Before each round begins, there is a 24 seconds voting period where the player is waiting for the Twitch audience to vote on level difficulty. There is no countdown clock or any other method to show the progress, leaving the player confused and sometimes bored. This is caused by not displaying the current system status.
                     <br/>
                     <br/>
-                    I explored different ways to solve this problem and ended up <b>using audio prompts</b>. Since our game already have a “virtual host” that guides the player through the game and makes random commentaries, we decided to go with the same theme and have the host explain the current status to the player. In addition to <b>informing the player that audience is voting on the upcoming level</b>, the host will also entertain the player by commenting on the voting process.
+                    I explored different ways to solve this problem and ended up <b>using audio prompts</b>. Since our game already have a “virtual host” that guides the player through the game and makes random commentaries, we decided to go with the same theme. We asked the voice actor of the “virtual host” to record some short audio clips explaining the current voting status to the player. In addition to <b>informing the player that audience is voting on the upcoming level</b>, the host will also entertain the player by commenting on the voting process.
                     </p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                     <br/>
                     <br/>
 
-                    After talking to the designer about this issue, we decided to keep the way it is, since “this game is basically to troll you.” But we ended up adding an audio prompt to inform players that they can <b>return to main menu</b> by “killing themselves in the game”. However,
+                    After discussing with the designer aout this issue, we decided to keep the way it is, since “this game is basically to troll you.” However, we added an audio prompt to inform players that they can <b>return to main menu</b> by “killing themselves in the game.”
                     </p>
                     </div>
                 </div>
@@ -156,21 +156,22 @@
                     <br/>
                     <br/>
 
-                    A common way of solving this issue in VR is to change the action from clicking to holding/hovering for a short period of time. This eliminates most error-prone conditions such that the player is simply looking around or grabbing the virtual objects around them. We also implemented this in our VR game: when the players want to identify the save tile, they need to <b>hold the trackpad button for 3 seconds to confirm</b>.
-                    <br/>
-                    <br/>
+                    A common way of solving this issue in VR is to change the action from clicking to holding/hovering for a short period of time. This eliminates most error-prone conditions such that the player is simply looking around or grabbing the virtual objects around them. This is implemented in our game: when the players want to identify the save tile, they need to <b>hold the trackpad button for 3 seconds to confirm</b>.
 
-                    Here I am proposing another solution to this problem: <b>register the “click” event when the player <i>starts</i> to pull the trigger</b>, not when the trigger button is released. This way it eliminates the possible controller movement that could cause by clicking or squeezing the controller.
+                    <!-- <br/>
+                    <br/> -->
+                    <!-- Here I am proposing another solution to this problem: <b>register the “click” event when the player <i>starts</i> to pull the trigger</b>, not when the trigger button is released. This way it eliminates the possible controller movement that could cause by clicking or squeezing the controller. -->
                     </p>
                     </div>
                 </div>
-<!--                 <div class="row" style="margin-top: 1em">
-                    <h3><b>Other Usability Heuristics</b></h3>
+                <div class="row" style="margin-top: 1em">
+                    <h3>Other Usability Heuristics</h3>
                     <div class="col-md-12">
-                    The above three usability heuristics are the ones that I found the most useful when evaluating the interface. Other heuristics are applicable to VR as well, such as "Aesthetic and minimalist design" which is even more important in VR than 2D design space, since the virtual space can feel cluttered real quick as more information are added.
+                        <p>The above three usability heuristics are the ones that I found the most useful when evaluating the user experience in VR. Other heuristics are applicable to VR as well, such as "Aesthetic and minimalist design" which is even more important in VR than 2D design space, since the virtual space can feel cluttered real quick as more information are added.
+                        </p>
                     </div>
                 </div>
- -->            </div>
+            </div>
         </div>
 
 
@@ -224,7 +225,7 @@
                     </div>
                 </div>
                 <div class="row" style="color:black">
-                    <h3><b>Turn 2D UI into 3D objects</b></h3>
+                    <h3><b>3D UI</b></h3>
                     <div class="col-md-12">
                         <p>
                         Instead of aiming with a laser and pressing the trigger button to interact with UI, make 2D UI into 3D objects so that the user can directly interact with it. 3D objects also blend in with the virtual environment better.
@@ -252,15 +253,15 @@
                     </div>
                 </div>
                 <div class="row" style="color:black; margin-top: 1.5em">
-                    <h3><b>Use physical interactions</b></h3>
+                    <h3><b>Physical Interactions</b></h3>
                     <div class="col-md-12">
                         <p>
                         Different than the previous solution, this one is more about changing the concept of what UI can be. Think out side of the box, use the physical world as inspirations. Here are some examples:
                         </p>
                         <ul>
-                            <li>touch a book to open the menu</li>
-                            <li>grab a ball that represents an option</li>
-                            <li>piece things together to use (think of point-and-click puzzle games)</li>
+                            <li>Pick up a book to open the menu / touch the pages to go to different page</li>
+                            <li>Grab a ball that represents an option</li>
+                            <li>Piece things together to use <!-- (think of point-and-click puzzle games) --></li>
                         </ul>
                     </div>
                     <div class="col-md-8" style="color: grey">
@@ -269,7 +270,7 @@
                     </div>
                 </div>
                 <div class="row" style="color:black; margin-top: 1.5em">
-                    <h3><b>Extend controller</b></h3>
+                    <h3><b>Extend Controllers</b></h3>
                     <div class="col-md-12">
                         <p>
                             Let's move away from UIs, and focus on how we can modify our controller to make itself an interface. The best example would be the menu in Tilt Brush.
@@ -293,7 +294,7 @@
                         </div>
                 </div>
                 <div class="row" style="color:black; margin-top: 2em">
-                    <h3><b>Gesture interface</b></h3>
+                    <h3><b>Gesture Interface</b></h3>
                     <div class="col-md-12">
                         <p>
                             A universal, natural user interface would ease the learning curve of jumping into new VR applications and help more users to adopt VR. Thus I am proposing a generalized gesture-based interface that can be to guide user experiences design in VR.
@@ -331,20 +332,20 @@
                     <p>
                         Unlike other mediums, the immersiveness of virtual reality gives users the most unique experience, but at the same time magnifies the tiniest glitches and inconsistencies. Your game could look perfectly fine in the Unity3D window, but once you put on that headset, the bugs become a lot noticeable simple because “it doesn’t feel right.”
                         <br/><br/>
-                        During my development experience, I found that small errors within these areas tend to be ignored by our developers, which could make the game feels unfinished:
+                        During my development experience, I found that small problems within these areas tend to be ignored by our developers, which could make the game feels unfinished:
                     <ol>
-                        <li> Color consistency </li>
-                        <li> Sudden changes in the background (3D skybox) </li>
-                        <li> Audio doesn't sync with visual</li>
-                        <li> No audio, or inconsistency in volume level </li>
+                        <li> Color inconsistency in 2D interface as well as 3D objects</li>
+                        <li> Changes in the peripheral vision</li>
+                        <li> Audio not syncing with visual</li>
+                        <li> Inconsistency in volume level </li>
                     </ol>
                     </p>
 
                     <p>
-                        Another area that could potentially break the game is: <b>throwing things in VR</b>. It's no secret that players all love to throw random things around in VR, but it could cause hidden problems as well.
+                        Another area that could potentially break the game is: <b>throwing things in VR</b>. It's no secret that players all love to throw random things around in VR, but it could cause hidden problems as well. Take the following problem I encoutered during VR game development as an example:
                     </p>
                     <p>
-                        A problem that I found in our game is player could throw batteries (the key to solve the puzzle) onto certain places that's <b>unreachable by the player</b>. Since the batteries doesn't respawn unless they are destroyed, that round became unsolvable. I used a simple solution without changing much in the game: <b>make all surfaces slippery</b> for the batteries, so they will <b>always fall along the sides</b> and eventually get destroyed when they hit the bottom of the game board.
+                        It is possible for players to throw batteries (the key to solve the puzzle) onto certain places where is <b>unreachable by the player</b> and get stuck. Since the batteries doesn't respawn unless they hit the bottom of the game board, that round becomes unsolvable. I used a simple solution without changing much in the game: <b>make the surfaces slippery</b> for the batteries, so they will not stay on those surfaces, and <b>always fall along the sides</b> and eventually get respawned.
                     </p>
                     </div>
                 </div>
