@@ -104,7 +104,10 @@
                 </div>
                 <div class="row" style="color:black; margin-top: 1em">
                     <h2>Original User Interface</h2>
-                    <p>When I first come into the project, the UI was quite messy. Since the target platform of this application was Augmented Reality, the UI was originally designed to ensure that key information is always visible to the user. The list of steps and coffee orders is overlaid on top of the user's view as follows:
+                    <div class="col-md-12">
+                        <p>When I first come into the project, the UI was quite messy. Since the target platform of this application was Augmented Reality, the UI was originally designed to ensure that key information is always visible to the user. The list of steps and coffee orders is overlaid on top of the user's view as follows:
+                        </p>
+                    </div>
                     <!-- <p>When I come into the project, the UI was designed for Augmented Reality. Information is overlaid on top of the user's view:</p> -->
                     <div class="col-md-3">
                         <!-- <img style="width:30em" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2012/06/Iron_Man_Mark_VII_HUD_design_By_Jayse_Hansen_1400.png" class="img-responsive"> -->
@@ -115,31 +118,35 @@
                     <div class="col-md-3"></div>
                 </div>
                 <div class="row" style="color:black; margin-top: 1em ">
-                    However, the following issues came up when testing in VR:
-                    <ol>
-                        <li><b>The overlaid information is distracting to the user</b>. Since the purpose of our application is training, we want the trainees to focus on the actual activity.</li>
-                        <li>Due to the hardware limitation, lens of the HTC Vive tend to get <b>blurry around the edges</b>. It causes the text at the top-left corner hard to see clearly.</li>
-                        <li>The UI would become <b>unreadable if more items are added</b> to the list of steps.</li>
-                    </ol>
-                    <p style="margin-top: 1em">
-                    After discussing with the lead designer, we decided to remove all overlaid information.
-                    </p>
+                    <div class="col-md-12">
+                        However, the following issues came up when testing in VR:
+                        <ol>
+                            <li><b>The overlaid information is distracting to the user</b>. Since the purpose of our application is training, we want the trainees to focus on the actual activity.</li>
+                            <li>Due to the hardware limitation, lens of the HTC Vive tend to get <b>blurry around the edges</b>. It causes the text at the top-left corner hard to see clearly.</li>
+                            <li>The UI would become <b>unreadable if more items are added</b> to the list of steps.</li>
+                        </ol>
+                        <p style="margin-top: 1em">
+                        Therefore, I suggested that we should remove all overlaid information and display them elsewhere.
+                        </p>
+                    </div>
                 </div>
                 <div class="row" style="margin-top: 1em">
                     <h2>Re-design Orders Panel</h2>
                     <!-- <h3>Orders Panel</h3> -->
-                    <p>Order accuracy is one of the main requirement of this application. So we still need a place for the orders, but in a different location. I proposed a solution: place the orders panel on an "invisible belt" and strap it onto the user, so the player can review the orders by looking downwards.</p>
-                    <!-- place the panel slightly below the user's normal viewing direction.</p> -->
-                    <img src="image/barista-training/view_position.jpg" class="img-responsive">
-                    <p>I did a quick prototyping and moved the panel onto the user's virtual body, with position and rotation relative to the user's headset (CameraRig). So the player can move and turn around freely, with the panel just slightly below their body.</p>
-                    <p>We iterated upon the position, angle, size of the orders panel. The final design is demonstrated below:</p>
+                    <div class="col-md-12">
+                        <p>Order accuracy is one of the main requirement of this application. So we need a different location to put the orders. I proposed a solution: place the orders panel on an "invisible belt" that straps onto the user, so it moves along with the player and the player can review the orders simplyby looking downwards.</p>
+                        <!-- place the panel slightly below the user's normal viewing direction.</p> -->
+                        <img src="image/barista-training/view_position.jpg" class="img-responsive">
+                        <p>I made a quick prototype and moved the panel to the user's virtual body, with position and rotation relative to the user's headset (CameraRig). So the player can move and turn around freely, with the panel just slightly below their line of sight, but still within their peripheral vision.</p>
+                        <p>We tested different settings for the position, angle, size of the orders panel. The final design is demonstrated below:</p>
+                    </div>
                     <div class="col-md-6">
                         <img src="image/barista-training/view_normal.jpg" class="img-responsive image-shadow">
                         <i>Usual viewing angle</i>
                     </div>
                     <div class="col-md-6">
                         <img src="image/barista-training/view_below.jpg" class="img-responsive image-shadow">
-                        <i>Viewing downwards at about 28° angle</i>
+                        <i>Viewing downwards at about 28°</i>
                     </div>
                 </div>
             </div>
