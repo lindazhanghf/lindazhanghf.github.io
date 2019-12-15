@@ -51,7 +51,7 @@ permalink: /404.html
 
     <script>
         var url = window.location.href.split('/');
-        var text = url[url.length - 1];
+        var text = url[url.length - 1].toLowerCase();
 
         if (text.substring(url.length - 5, url.length) == ".html")
             text = text.substring(0, url.length - 5)
@@ -59,7 +59,7 @@ permalink: /404.html
         var link;
         if (text == "portfolio") link = "https://linndz.com"
         else if (text == "ccg") link = "https://research.cc.gatech.edu/ccg/?q=projects/copycat"
-        else if (text == "bb-8") link = "game/star-wars-escape"
+        else if (text == "bb-8" || text == "bb8") link = "game/star-wars-escape"
         else if (text == "below") link = "game/below-alexa"
         else if (text == "gbam") link = "project/gbam"
 
