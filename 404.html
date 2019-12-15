@@ -49,6 +49,24 @@ permalink: /404.html
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        var url = window.location.href.split('/');
+        var text = url[url.length - 1];
+
+        if (text.substring(url.length - 5, url.length) == ".html")
+            text = text.substring(0, url.length - 5)
+
+        var link;
+        if (text == "portfolio") link = "index"
+        else if (text == "bb-8") link = "game/star-wars-escape.html"
+        else if (text == "below") link = "game/below.html"
+        else if (text == "ccg") link = "https://research.cc.gatech.edu/ccg/?q=projects/copycat"
+        else if (text == "gbam") link = "project/gbam.html"
+
+        if (link)
+            window.location.assign(link);
+    </script>
+
     </head>
     <body>
 
@@ -95,7 +113,7 @@ permalink: /404.html
                             </figure>
                         </div>
                         <div class="fh5co-text"><br/>
-                            <h2><b>Star Wars Escape VR</b></h2>
+                            <h2><b style="color:#52d3aa">Star Wars Escape VR</b></h2>
                             <p>Room escape game that explores <b>virtual character empathy</b> and <b>VR interactions</b></p>
                         </div>
                     </a>
@@ -108,8 +126,8 @@ permalink: /404.html
                             <img src="project/image/glass_thumbnail.jpg" alt="Image" class="img-responsive">
                         </figure>
                         <div class="fh5co-text">
-                            <h2><b><br/>Glass Social Helper</b></h2>
-                            <p><b>Context-aware interface</b> on <br/><i>Google Glass</i> for assisting <br/> <b>Autism Spectrum Disorder</b></p>
+                            <h2><b style="color:#52d3aa"><br/>Glass Social Helper</b></h2>
+                            <p style="padding-top: .6em"><b>Context-aware interface</b> on <br/><i>Google Glass</i> for assisting <br/> <b>Autism Spectrum Disorder</b></p>
                         </div>
                     </a>
                 </div>
@@ -121,7 +139,7 @@ permalink: /404.html
                             <img src="game/image/below-alexa/below-thumbnail.png" alt="Image" class="img-responsive">
                         </figure>
                         <div class="fh5co-text"><br/>
-                            <h2><b>Below</b></h2>
+                            <h2><b style="color:#52d3aa">Below</b></h2>
                             <p><b>Voice-based narrative</b> game <br/>on <i>Amazon Alexa</i> <br/>with multiple endings</p>
                         </div>
                     </a>
