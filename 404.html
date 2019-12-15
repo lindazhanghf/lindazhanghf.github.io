@@ -57,11 +57,11 @@ permalink: /404.html
             text = text.substring(0, url.length - 5)
 
         var link;
-        if (text == "portfolio") link = "index"
-        else if (text == "bb-8") link = "game/star-wars-escape.html"
-        else if (text == "below") link = "game/below-alexa.html"
+        if (text == "portfolio") link = "https://linndz.com"
         else if (text == "ccg") link = "https://research.cc.gatech.edu/ccg/?q=projects/copycat"
-        else if (text == "gbam") link = "project/gbam.html"
+        else if (text == "bb-8") link = "game/star-wars-escape"
+        else if (text == "below") link = "game/below-alexa"
+        else if (text == "gbam") link = "project/gbam"
 
         if (link)
             window.location.assign(link);
