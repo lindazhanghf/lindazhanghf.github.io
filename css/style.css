@@ -68,27 +68,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.75rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 ::-webkit-selection {
@@ -250,6 +250,12 @@ h6 {
   }
 }
 
+@media {
+  .col-md-offset-2 {
+      margin-left: 0 !important;
+  }
+}
+
 .fh5co-hero .fh5co-intro h1, .fh5co-parallax .fh5co-intro h1 {
   color: #fff;
   font-size: 4rem;
@@ -266,7 +272,7 @@ h6 {
 
 .fh5co-hero .fh5co-intro p, .fh5co-parallax .fh5co-intro p {
   color: #fff;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   margin-bottom: 30px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -318,10 +324,11 @@ h6 {
 /* Section Headings */
 .gtco-heading {
   margin-bottom: 5em;
+  text-align: center;
+  width: 100%;
 }
 
 .gtco-heading h1 {
-  font-size: 2.5rem;
   margin-bottom: 10px;
   position: relative;
   display: inline-block;
@@ -398,7 +405,7 @@ h6 {
 }
 
 .fh5co-project-item .fh5co-text h2 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 600;
   margin: 0 0 10px 0;
   color: var(--primary-color);
@@ -433,7 +440,7 @@ h6 {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: 500;
   text-align: center;
   text-decoration: none;
