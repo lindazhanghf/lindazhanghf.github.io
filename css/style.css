@@ -248,7 +248,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 2000px) {
+@media all {
   .col-md-offset-2 {
       margin-left: 0 !important;
   }
